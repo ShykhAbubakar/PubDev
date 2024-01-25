@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:readmore/readmore.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.orange,
       appBar: AppBar(
         title: const Center(
             child: Text(
@@ -21,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         )),
         backgroundColor: Colors.blue,
       ),
-      body: const SingleChildScrollView(
+      body:  SingleChildScrollView(
         child: Column(
           children: [
             // 1. Use of Awesome Fonts through Pub Dev
@@ -40,6 +42,27 @@ class _HomeScreenState extends State<HomeScreen> {
             //   style: TextStyle(color: Colors.purple),
             //
             // ),
+
+            // 3. Aminated Text
+          // SizedBox(
+          // width: 250.0,
+          // child: DefaultTextStyle(
+          //   style: const TextStyle(
+          //     fontSize: 32.0,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          //   child: AnimatedTextKit(
+          //     animatedTexts: [
+          //       FadeAnimatedText('do IT!'),
+          //       FadeAnimatedText('do it RIGHT!!'),
+          //       FadeAnimatedText('do it RIGHT NOW!!!'),
+          //     ],
+          //     onTap: () {
+          //       print("Tap Event");
+          //     },
+          //   ),
+          // ),
+          // ),
           ],
         ),
       ),
